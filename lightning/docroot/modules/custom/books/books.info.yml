@@ -1,0 +1,5 @@
+name: 'Books'
+type: module
+description: 'Custom entity for describing a custom book entity'
+core: 8.x
+package: 'Custom'
