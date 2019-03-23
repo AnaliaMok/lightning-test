@@ -8,7 +8,7 @@ use Drupal\Core\Form\FormStateInterface;
 /**
  * Form class for adding and editing Advertiser bundles.
  */
-class AdvertiserEntityTypeForm extends BundleEntityFormBase {
+class AdvertiserTypeEntityForm extends BundleEntityFormBase {
 
     /**
      * {@inheritDoc}
@@ -32,7 +32,7 @@ class AdvertiserEntityTypeForm extends BundleEntityFormBase {
             '#type' => 'machine_name',
             '#default_value' => $entity_type->id(),
             '#machine_name' => [
-                'exists' => '\Drupal\Advertiser\Entity\AdvertiserTypeEntity::load',
+                'exists' => '\Drupal\advertiser\Entity\AdvertiserType::load',
             ],
             '#disabled' => !$entity_type->isNew(),
         ];
