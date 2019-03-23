@@ -1,0 +1,8 @@
+name: lightning-test
+recipe: drupal8
+config:
+  webroot: lightning/docroot
+tooling:
+  blt:
+    service: appserver
+    cmd: /usr/bin/blt
