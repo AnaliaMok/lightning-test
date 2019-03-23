@@ -1,0 +1,6 @@
+uuid: 2cf200fb-9acd-4a1a-8596-ffc0ca4c46c5
+langcode: en
+status: true
+dependencies: {  }
+id: cookbook
+label: Cookbook

@@ -1,0 +1,39 @@
+uuid: 473f7e98-23d9-4f65-8c49-787683954181
+langcode: en
+status: true
+dependencies:
+  config:
+    - books.book_entity_type.cookbook
+    - field.field.book_entity.cookbook.field_cover_image
+  module:
+    - user
+id: book_entity.cookbook.default
+targetEntityType: book_entity
+bundle: cookbook
+mode: default
+content:
+  field_cover_image:
+    type: entity_reference_entity_view
+    weight: 4
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  name:
+    label: above
+    type: string
+    weight: -4
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  user_id:
+    label: hidden
+    type: author
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

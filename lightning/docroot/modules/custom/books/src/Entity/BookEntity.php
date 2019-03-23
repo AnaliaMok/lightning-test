@@ -203,6 +203,7 @@ class BookEntity extends RevisionableContentEntityBase implements BookEntityInte
   public static function baseFieldDefinitions(EntityTypeInterface $entity_type) {
     $fields = parent::baseFieldDefinitions($entity_type);
 
+    // Default Fields.
     $fields['user_id'] = BaseFieldDefinition::create('entity_reference')
       ->setLabel(t('Authored by'))
       ->setDescription(t('The user ID of author of the Book entity entity.'))
@@ -274,6 +275,61 @@ class BookEntity extends RevisionableContentEntityBase implements BookEntityInte
       ->setReadOnly(TRUE)
       ->setRevisionable(TRUE)
       ->setTranslatable(TRUE);
+
+    // Custom Added Fields.
+    $fields['isbn'] = BaseFieldDefinition::create('integer')
+      ->setLabel(t('ISBN'))
+      ->setDescription(t('ISBN of the Book'))
+      ->setRevisionable(TRUE)
+      ->setTranslatable(TRUE)
+      ->setDisplayOptions('form', array(
+        'type' => 'string_textfield',
+        'settings' => array(
+          'display_label' => TRUE,
+        ),
+      ))
+      ->setDisplayOptions('view', array(
+        'label' => 'hidden',
+        'type' => 'string',
+      ))
+      ->setDisplayConfigurable('form', TRUE)
+      ->setRequired(TRUE);
+
+    $fields['author'] = BaseFieldDefinition::create('string')
+      ->setLabel(t('Author'))
+      ->setDescription(t('Author of the Book'))
+      ->setRevisionable(TRUE)
+      ->setTranslatable(TRUE)
+      ->setDisplayOptions('form', array(
+        'type' => 'string_textfield',
+        'settings' => array(
+          'display_label' => TRUE,
+        ),
+      ))
+      ->setDisplayOptions('view', array(
+        'label' => 'hidden',
+        'type' => 'string',
+      ))
+      ->setDisplayConfigurable('form', TRUE)
+      ->setRequired(TRUE);
+
+    $fields['price'] = BaseFieldDefinition::create('float')
+      ->setLabel(t('Price'))
+      ->setDescription(t('Price of the Book'))
+      ->setRevisionable(TRUE)
+      ->setTranslatable(TRUE)
+      ->setDisplayOptions('form', array(
+        'type' => 'string_textfield',
+        'settings' => array(
+          'display_label' => TRUE,
+        ),
+      ))
+      ->setDisplayOptions('view', array(
+        'label' => 'hidden',
+        'type' => 'string',
+      ))
+      ->setDisplayConfigurable('form', TRUE)
+      ->setRequired(TRUE);
 
     return $fields;
   }

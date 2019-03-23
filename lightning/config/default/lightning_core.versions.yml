@@ -109,3 +109,5 @@ devel_generate: 2.0.0
 field_layout: 8.6.13
 layout_builder: 8.6.13
 advertiser: 0.0.0
+rest: 8.6.13
+books: 0.0.0

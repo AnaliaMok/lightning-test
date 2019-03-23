@@ -1,0 +1,20 @@
+uuid: eebec178-209c-4415-8efa-f1a6e8cd9c03
+langcode: en
+status: true
+dependencies:
+  module:
+    - books
+    - media
+id: book_entity.field_cover_image
+field_name: field_cover_image
+entity_type: book_entity
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

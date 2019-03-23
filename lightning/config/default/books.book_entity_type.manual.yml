@@ -1,0 +1,6 @@
+uuid: 6f14bd21-e283-46f0-bf39-fad40d250532
+langcode: en
+status: true
+dependencies: {  }
+id: manual
+label: Manual

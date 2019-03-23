@@ -1,0 +1,75 @@
+uuid: 087a0b2c-b94f-4cbd-8208-8a4e69ea7988
+langcode: en
+status: true
+dependencies:
+  config:
+    - books.book_entity_type.cookbook
+    - field.field.book_entity.cookbook.field_cover_image
+  module:
+    - content_moderation
+    - field_layout
+    - layout_discovery
+    - media_library
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: book_entity.cookbook.default
+targetEntityType: book_entity
+bundle: cookbook
+mode: default
+content:
+  author:
+    type: string_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    region: content
+    weight: 27
+    third_party_settings: {  }
+  field_cover_image:
+    type: media_library_widget
+    weight: 101
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  isbn:
+    type: string_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    region: content
+    weight: 26
+    third_party_settings: {  }
+  moderation_state:
+    type: moderation_state_default
+    weight: 100
+    settings: {  }
+    region: content
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: -4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  price:
+    type: string_textfield
+    settings:
+      size: 60
+      placeholder: ''
+    region: content
+    weight: 28
+    third_party_settings: {  }
+  user_id:
+    type: entity_reference_autocomplete
+    weight: 5
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+hidden: {  }
