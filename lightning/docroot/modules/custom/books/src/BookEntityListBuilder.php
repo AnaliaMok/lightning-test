@@ -11,30 +11,34 @@ use Drupal\Core\Link;
  *
  * @ingroup books
  */
-class BookEntityListBuilder extends EntityListBuilder {
+class BookEntityListBuilder extends EntityListBuilder
+{
 
+    /**
+     * {@inheritdoc}
+     */
+    public function buildHeader()
+    {
+        $header['id'] = $this->t('Book entity ID');
+        $header['name'] = $this->t('Name');
+        $header['type'] = $this->t('Type');
+        return $header + parent::buildHeader();
+    }
 
-  /**
-   * {@inheritdoc}
-   */
-  public function buildHeader() {
-    $header['id'] = $this->t('Book entity ID');
-    $header['name'] = $this->t('Name');
-    return $header + parent::buildHeader();
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function buildRow(EntityInterface $entity) {
-    /* @var $entity \Drupal\books\Entity\BookEntity */
-    $row['id'] = $entity->id();
-    $row['name'] = Link::createFromRoute(
-      $entity->label(),
-      'entity.book_entity.edit_form',
-      ['book_entity' => $entity->id()]
-    );
-    return $row + parent::buildRow($entity);
-  }
+    /**
+     * {@inheritdoc}
+     */
+    public function buildRow(EntityInterface $entity)
+    {
+        /* @var $entity \Drupal\books\Entity\BookEntity */
+        $row['id'] = $entity->id();
+        $row['name'] = Link::createFromRoute(
+            $entity->label(),
+            'entity.book_entity.edit_form',
+            ['book_entity' => $entity->id()]
+        );
+        $row['type'] = $entity->bundle();
+        return $row + parent::buildRow($entity);
+    }
 
 }
