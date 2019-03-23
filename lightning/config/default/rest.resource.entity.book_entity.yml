@@ -1,0 +1,18 @@
+uuid: 51856a16-9df0-4a81-8691-e8dcf9e93b2d
+langcode: en
+status: true
+dependencies:
+  module:
+    - books
+    - serialization
+    - user
+id: entity.book_entity
+plugin_id: 'entity:book_entity'
+granularity: resource
+configuration:
+  methods:
+    - GET
+  formats:
+    - json
+  authentication:
+    - cookie

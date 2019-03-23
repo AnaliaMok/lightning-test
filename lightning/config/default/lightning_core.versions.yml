@@ -115,3 +115,4 @@ language: 8.6.13
 locale: 8.6.13
 config_translation: 8.6.13
 content_translation: 8.6.13
+restui: 1.16.0
