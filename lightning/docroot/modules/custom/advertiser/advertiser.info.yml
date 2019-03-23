@@ -1,0 +1,5 @@
+name: Advertiser
+type: module
+description: "Simple Advertiser Entity"
+package: custom
+core: 8.x
