@@ -111,3 +111,7 @@ layout_builder: 8.6.13
 advertiser: 0.0.0
 rest: 8.6.13
 books: 0.0.0
+language: 8.6.13
+locale: 8.6.13
+config_translation: 8.6.13
+content_translation: 8.6.13
