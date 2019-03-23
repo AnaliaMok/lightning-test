@@ -1,0 +1,14 @@
+{
+  "name": "drupal/normalizers",
+  "type": "drupal-module",
+  "description": "REST JSON response normalizer module",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/normalizers",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "https://www.drupal.org/project/issues/normalizers",
+    "source": "http://cgit.drupalcode.org/normalizers"
+  },
+  "require": { }
+}

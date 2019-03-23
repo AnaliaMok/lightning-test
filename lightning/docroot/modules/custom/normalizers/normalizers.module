@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains normalizers.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function normalizers_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the normalizers module.
+    case 'help.page.normalizers':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('REST JSON response normalizer module') . '</p>';
+      return $output;
+
+    default:
+  }
+}

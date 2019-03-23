@@ -1,0 +1,7 @@
+services:
+  # Book Entity Normalizer
+  normalizers.book_entity:
+    class: Drupal\normalizers\Normalizer\BookEntityNormalizer
+    arguments: ["@entity.manager"]
+    tags:
+      - { name: normalizer, priority: 2 }
