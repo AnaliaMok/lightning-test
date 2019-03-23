@@ -12,6 +12,28 @@
  *      "id" = "id",
  *      "uuid" = "uuid",
  *  },
+ *  handlers = {
+ *      "form" = {
+ *          "default" = "Drupal\Core\Entity\ContentEntityForm",
+ *          "add" = "Drupal\Core\Entity\ContentEntityForm",
+ *          "edit" = "Drupal\Core\Entity\ContentEntityForm",
+ *          "delete" = "Drupal\Core\Entity\ContentEntityDeleteForm",
+ *      },
+ *      "route_provider" = {
+ *          "html" = "Drupal\Core\Entity\Routing\AdminHtmlRouteProvider",
+ *      }
+ *  },
+ *  links = {
+ *      "canonical" = "/advertiser/{advertiser}",
+ *      "add-page" = "/advertiser/add",
+ *      "add-form" = "/advertiser/add/{advertiser_type}",
+ *      "edit-form" = "/advertiser/{advertiser}/edit",
+ *      "delete-form" = "/advertiser/{advertiser}/delete",
+ *  },
+ *  admin_permission = "administer site configuration",
+ *  bundle_entity_type = "advertiser_type",
+ *  fieldable = TRUE,
+ *  field_ui_base_route = "entity.advertiser_type.edit_form",
  * )
  */
 namespace Drupal\advertiser\Entity;
