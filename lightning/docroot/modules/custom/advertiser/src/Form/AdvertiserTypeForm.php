@@ -8,7 +8,7 @@ use Drupal\Core\Form\FormStateInterface;
 /**
  * Form class for adding and editing Advertiser bundles.
  */
-class AdvertiserTypeForm extends BundleEntityFormBase {
+class AdvertiserEntityTypeForm extends BundleEntityFormBase {
 
     /**
      * {@inheritDoc}

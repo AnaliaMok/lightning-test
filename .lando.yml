@@ -2,6 +2,12 @@ name: lightning-test
 recipe: drupal8
 config:
   webroot: lightning/docroot
+services:
+  appserver:
+    webroot: lightning/docroot
+    xdebug: true
+    config:
+      php: .vscode/php.ini
 tooling:
   blt:
     service: appserver
