@@ -1,0 +1,65 @@
+uuid: b50e38fc-8831-4ab4-84fd-2fa3b68e1ce9
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.thumbnail
+    - field.field.media.video_file.field_media_in_library
+    - field.field.media.video_file.field_media_video_file
+    - image.style.medium
+    - media.type.video_file
+  module:
+    - field_layout
+    - image
+    - layout_builder
+    - layout_discovery
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          7c10844a-128a-4528-919d-e31eb9d60306:
+            uuid: 7c10844a-128a-4528-919d-e31eb9d60306
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:media:video_file:thumbnail'
+              formatter:
+                type: image
+                label: visually_hidden
+                settings:
+                  image_style: medium
+                  image_link: ''
+                third_party_settings: {  }
+            additional: {  }
+            weight: 0
+_core:
+  default_config_hash: LnhtiSv-DKlqP8O8PK4qb2oFukMS301vvc94upqHTYg
+id: media.video_file.thumbnail
+targetEntityType: media
+bundle: video_file
+mode: thumbnail
+content:
+  thumbnail:
+    type: image
+    weight: 0
+    region: content
+    label: visually_hidden
+    settings:
+      image_style: medium
+      image_link: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_media_in_library: true
+  field_media_video_file: true
+  name: true
+  uid: true

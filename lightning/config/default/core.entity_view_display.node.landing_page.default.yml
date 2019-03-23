@@ -1,0 +1,103 @@
+uuid: 4eed3327-43ca-4c60-a6e6-70a921e2970c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.landing_page.body
+    - field.field.node.landing_page.field_meta_tags
+    - field.field.node.landing_page.panelizer
+    - node.type.landing_page
+  module:
+    - field_layout
+    - layout_builder
+    - layout_discovery
+    - metatag
+    - text
+    - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          82550101-d105-4ddf-a7d6-be1762e828c3:
+            uuid: 82550101-d105-4ddf-a7d6-be1762e828c3
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:landing_page:links'
+            additional: {  }
+            weight: 0
+          a913e10e-ebb4-45f9-bc32-fd8601601ab1:
+            uuid: a913e10e-ebb4-45f9-bc32-fd8601601ab1
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:landing_page:body'
+              formatter:
+                label: hidden
+                settings:
+                  trim_length: 600
+                third_party_settings: {  }
+                type: text_summary_or_trimmed
+            additional: {  }
+            weight: 1
+          6e204433-d1f4-40f3-9037-0975ef957637:
+            uuid: 6e204433-d1f4-40f3-9037-0975ef957637
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:landing_page:field_meta_tags'
+              formatter:
+                type: metatag_empty_formatter
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
+            weight: 2
+_core:
+  default_config_hash: SkxeWojHNSc5vLeE-XSjLhntXats7kNY7Vhbzy21xRU
+id: node.landing_page.default
+targetEntityType: node
+bundle: landing_page
+mode: default
+content:
+  body:
+    weight: 102
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    type: text_summary_or_trimmed
+    region: content
+  field_meta_tags:
+    type: metatag_empty_formatter
+    region: content
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  workbench_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  content_moderation_control: true
+  panelizer: true

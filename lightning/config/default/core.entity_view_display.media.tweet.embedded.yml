@@ -1,0 +1,60 @@
+uuid: 100b4d7e-aaf1-4713-abda-14e71994c6e8
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.embedded
+    - field.field.media.tweet.embed_code
+    - field.field.media.tweet.field_media_in_library
+    - media.type.tweet
+  module:
+    - field_layout
+    - layout_builder
+    - layout_discovery
+    - media_entity_twitter
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          bb40f8ad-14dd-4133-8ca0-ebd02fe77e8b:
+            uuid: bb40f8ad-14dd-4133-8ca0-ebd02fe77e8b
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:media:tweet:embed_code'
+              formatter:
+                type: twitter_embed
+                label: hidden
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
+            weight: 0
+_core:
+  default_config_hash: 576jZt8I-8Q1YDaS7WRwUEkAFKl2XEXG9X6aS00uiEc
+id: media.tweet.embedded
+targetEntityType: media
+bundle: tweet
+mode: embedded
+content:
+  embed_code:
+    type: twitter_embed
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  created: true
+  field_media_in_library: true
+  name: true
+  thumbnail: true
+  uid: true

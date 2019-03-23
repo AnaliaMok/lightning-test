@@ -1,0 +1,104 @@
+uuid: edcd13b2-1119-460d-a5fc-7d7c7ed89736
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.landing_page.body
+    - field.field.node.landing_page.field_meta_tags
+    - field.field.node.landing_page.panelizer
+    - node.type.landing_page
+  module:
+    - field_layout
+    - layout_builder
+    - layout_discovery
+    - metatag
+    - text
+    - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+  layout_builder:
+    enabled: true
+    sections:
+      -
+        layout_id: layout_onecol
+        layout_settings: {  }
+        components:
+          c2a51d0e-ad91-446f-91d2-24a9bfa491b2:
+            uuid: c2a51d0e-ad91-446f-91d2-24a9bfa491b2
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'extra_field_block:node:landing_page:links'
+            additional: {  }
+            weight: 0
+          d5ea2e2b-49ff-4af6-b030-1df3fa0e1784:
+            uuid: d5ea2e2b-49ff-4af6-b030-1df3fa0e1784
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:landing_page:body'
+              formatter:
+                label: hidden
+                settings:
+                  trim_length: 600
+                third_party_settings: {  }
+                type: text_summary_or_trimmed
+            additional: {  }
+            weight: 1
+          7941c0ff-31a5-4baa-8d1f-f576ca3e9e81:
+            uuid: 7941c0ff-31a5-4baa-8d1f-f576ca3e9e81
+            region: content
+            configuration:
+              label_display: '0'
+              context_mapping:
+                entity: layout_builder.entity
+              id: 'field_block:node:landing_page:field_meta_tags'
+              formatter:
+                type: metatag_empty_formatter
+                label: above
+                settings: {  }
+                third_party_settings: {  }
+            additional: {  }
+            weight: 2
+_core:
+  default_config_hash: FRp6zjyWMGM2zPiyyrxZG3ftzsqIizslb7G2H8RbxcE
+id: node.landing_page.teaser
+targetEntityType: node
+bundle: landing_page
+mode: teaser
+content:
+  body:
+    weight: 102
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    type: text_summary_or_trimmed
+    region: content
+  field_meta_tags:
+    type: metatag_empty_formatter
+    region: content
+    weight: 103
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  workbench_moderation_control:
+    weight: -20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  content_moderation_control: true
+  panelizer: true
