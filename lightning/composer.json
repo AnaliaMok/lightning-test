@@ -5,7 +5,10 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "acquia/blt": "^9.2.0"
+        "acquia/blt": "^9.2.0",
+        "drupal/console": "~1.0",
+        "symfony/debug": "~3.0",
+        "symfony/dom-crawler": "~3.0"
     },
     "require-dev": {},
     "config": {
