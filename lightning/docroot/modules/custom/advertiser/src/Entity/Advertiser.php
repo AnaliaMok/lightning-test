@@ -7,7 +7,9 @@
  * @ContentEntityType(
  *  id = "advertiser",
  *  label = @Translation("Advertiser"),
+ *  bundle_label = @Translation("Advertiser Bundle Type"),
  *  base_table = "advertiser",
+ *  data_table = "advertiser_field_data",
  *  entity_keys = {
  *      "id" = "id",
  *      "uuid" = "uuid",
